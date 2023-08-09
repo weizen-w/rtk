@@ -1,16 +1,16 @@
 {
-	"homepage": "./",
 	"name": "vite-template-redux",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-		"start": "react-scripts start",
+		"dev": "vite",
+		"start": "vite",
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d build",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"test": "vitest",
 		"lint": "tsc --noEmit && eslint src/**/*.ts{,x} --cache --max-warnings=0",
 		"lint:fix": "eslint src/**/*.ts{,x} --fix",
 		"type-check": "tsc"
